@@ -1,0 +1,138 @@
+body {
+	background-image: url("https://www.itl.cat/pngfile/big/14-141344_yellow-wallpaper-hd-neon-yellow-wallpaper-hd.jpg");
+	height: 100%; /* You must set a specified height */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */ 
+}
+
+.container {
+	border-width: 100%;
+	border-color: black dashed 10px;
+	font-family: Comic sans MS;
+	color: black;
+	font-weight: bold;
+	margin: 8px 8px 8px 0px;
+}
+
+li,h4,p,ol,.upload,.proceed,.image,.container {
+	margin-left: 20px;
+}
+
+.welcome {
+  background-color: black;
+  color: yellow;
+  padding: 20px;
+  font-size: 35px;
+  border: none;	
+  text-align: center;
+}
+
+h1, li {
+	font-family: Comic sans MS;
+	color: black;
+}
+
+h4 {
+	font-family: Comic sans MS;
+	color: black;
+}
+
+p {
+	font-family: Comic sans MS;
+	color: black;
+}
+
+ol {
+	font-family: Comic sans MS;
+	color: black;
+}
+
+.upload {
+	border: 5px solid black;
+    display: inline-block;
+    padding: 6px 12px;
+    font-family: Comic sans MS;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.stage1 {
+  background-color: black;
+  color: white;
+  padding: 1px;
+  font-size: 16px;
+  border: white;
+  font-family: Comic sans MS;
+  color: yellow;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.stage2 {
+  background-color: black;
+  color: white;
+  padding: 1px;
+  font-size: 16px;
+  border: white;
+  font-family: Comic sans MS;
+  color: yellow;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.stage_res {
+  background-color: black;
+  color: white;
+  padding: 1px;
+  font-size: 16px;
+  border: white;
+  font-family: Comic sans MS;
+  color: yellow;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 35px;
+}
+
+.proceed {
+	color: yellow;
+	background-color: black;
+	font-family: Comic sans MS;
+	font-weight: bold;
+	margin: 20px;
+	justify-content: center;  
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+h1, .stage1, .stage2, .stage_res {
+	margin-left: 0px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+}
+
+thead tr {
+  background-color: #000;
+  color: #ffffff;
+  text-align: left;
+}
+
+th,td {
+  padding: 12px 15px;
+}

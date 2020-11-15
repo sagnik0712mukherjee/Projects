@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MODEL SCORE PREDICTOR</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<h1 class="welcome">What's the Score..!!??</h1>
+
+	<p><h4>This app is your mini Data Science assistant which helps you in...</h4>
+	<ol>
+		<li><h4>Feature Selection based on correlations, and...</h4></li>
+		<li><h4>Model and parameter selection for the prediction task based on accuracy scores, re-fit times, etc..</h4></li>
+	</ol></p>
+	<p><h4>in just two stages!!</h4></p>
+	<div class="container">IMPORTANT NOTE: ALL DATA FILES MUST BE '.csv' FILES!!</div>
+	<div class="stage1"><h3>STAGE 1: FIND CORRELATIONS!</h3></div>
+	<p><h4>Please upload your dataset IN CSV FORMAT to find correlations between the variables.</h4></p> 
+	<p><h4>This will assist you in feature selection based on comparison of the features and their correlation parameters or values..</h4></p>
+	<form class = "container" method="post" enctype="multipart/form-data" id="df-form">
+	  <input class ="upload" type="file" id="myFile" name="dataset" size="60" placeholder="dataset(csv)" required="required" accept=".csv">
+	  <!-- <input class ="upload" type="submit" name="Submit" id="myFile" size="60"> -->
+	</form>
+	<button type="submit" class="proceed" id="show-heatmap" onclick="showHeatmap()" >SHOW HEATMAP</button> <br>
+	<div style="width: 100%;display: flex;">
+		<img src="" alt="Image Placeholder" id="heatmap-img" width="905" height="905" style="display: none;
+		margin: 0 auto;">
+	</div>
+	<br>
+	<br>
+
+	<div class="stage2"><h3>STAGE 2: EVALUATE THE MODELS...</h3></div>
+		<form class = "container" method="post" enctype="multipart/form-data" id="inputs-form"><p><h4>PLEASE CHOOSE THE SCALED INPUT VARIABLES' CSV FILE</h4></p>
+			<input class ="upload" type="file" id="inputs-file" name="inputs_variables" size="60" placeholder="input variable(csv)" required="required" accept=".csv">
+			<!-- <input class ="upload" type="submit" name="Submit" id="myFile" size="60"> -->
+		</form>
+		<form class = "container" method="post" enctype="multipart/form-data" id="target-form"><p><h4>PLEASE CHOOSE THE SCALED TARGET VARIABLES' CSV FILE</h4></p>
+			<input class ="upload" type="file" name="target_variable" id="target-file" size="60" placeholder="target variable(csv)" required="required" accept=".csv">
+			<!-- <input class ="upload" type="submit" name="Submit" id="myFile" size="60"> -->
+		</form>
+	</div>
+	<br>
+	<br>
+	<button type="submit" class="proceed" onclick="showComparisonTable()">SHOW RESULT</button>
+	<div class="stage_res"><h3>HERE'S YOUR RESULT: COMPARISON TABLE OF PERFORMANCE OF THE MODELS:</h3></div> <br>
+	<div id="final-result" style="display: flex;">
+		<img src="/static/spinner.gif" style="display: none;margin: 0 auto;" id="spinner" width="60" height="60">
+	</div>
+	<br>
+	<br>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/static/cpu.js"></script>
+</body>
+</html>
